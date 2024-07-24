@@ -1,0 +1,97 @@
+.Laliga {
+  margin-top: 36px;
+  width: 100%;
+  background: url("../../Assets/back.png");
+  background-position: center;
+  padding-bottom: 36px;
+}
+.Laliga-headpost {
+  width: 100%;
+  height: 750px;
+  background: #454544;
+}
+.Laliga-mid{
+  margin-bottom: 60px;
+}
+.Laliga-mid h2{
+  width: 75%;
+}
+.Laliga h2 {
+  font-size: 42px;
+}
+.Laliga-head {
+  background: #000;
+  padding: 0px 30px 30px 0px;
+  margin-bottom: 0px;
+}
+.Laliga-down {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-top: solid 1px #9F9F9F;
+  padding-top: 32px;
+}
+.Laliga-inside1,
+.Laliga-inside2,
+.Laliga-inside3 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 100px;
+  margin-right: 23px;
+}
+.Laliga-post1,
+.Laliga-post2,
+.Laliga-post3 {
+  width: 100%;
+  height: 230px;
+  background: #454544;
+}
+@media screen and (min-width: 320px) and (max-width: 426px) {
+  .Laliga{
+    /* padding-left: 13px;
+    padding-right: 13px; */
+  }
+  .Laliga-down {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .Laliga-headpost {
+    width: 100%;
+    height: 195px;
+    background: #454544;
+  }
+  .Laliga-inside1,
+  .Laliga-inside2,
+  .Laliga-inside3 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+    padding-bottom: 5px;
+    gap: 12px;
+  }
+  .Laliga-post1,
+  .Laliga-post2,
+  .Laliga-post3 {
+    width: 100%;
+    height: 110px;
+    background: #454544;
+  }
+  .Laliga-inside-posts{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .Laliga-mid h2 {
+    font-size: 20px;
+  }
+}

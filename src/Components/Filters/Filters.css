@@ -1,0 +1,223 @@
+.Filters {
+  width: 100%;
+  padding-top: 36px;
+  background: url("../../Assets/back.png");
+  background-position: top;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.dropdown-Filters {
+  display: none;
+}
+.Filters-top-side {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+.Filters-divid {
+  width: 1px;
+  height: 31px;
+  background: #fff;
+}
+.dropdown-Filters.show {
+  transition: 0.5s;
+  display: block;
+}
+.Filters-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.Filters-left {
+  width: 30%;
+  padding: 10px 8px 10px 8px;
+  margin-bottom: 14px;
+  display: flex;
+  background: #5a5a5a;
+  border-radius: 2px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.Filters-right {
+  width: 65%;
+  padding: 10px 8px 10px 8px;
+  margin-bottom: 14px;
+}
+.Filters-right-main .slick-slide {
+  margin-right: 12px;
+}
+#one {
+  width: 34px;
+  padding: 8px;
+  text-align: left;
+  margin-left: 10px;
+  background: #000;
+  border-radius: 2px;
+}
+#two {
+  width: 128px;
+  padding: 8px 37px 8px 8px;
+  text-align: left;
+  margin-left: 10px;
+  background: #5a5a5a;
+  border-radius: 2px;
+}
+#tree {
+  width: 128px;
+  padding: 8px 37px 8px 8px;
+  text-align: left;
+  margin-left: 10px;
+  background: #5a5a5a;
+  border-radius: 2px;
+}
+#four {
+  width: 128px;
+  padding: 8px 37px 8px 8px;
+  text-align: left;
+  margin-left: 10px;
+  background: #5a5a5a;
+  border-radius: 2px;
+}
+#five {
+  width: 128px;
+  padding: 8px 37px 8px 8px;
+  text-align: left;
+  margin-left: 10px;
+  background: #5a5a5a;
+  border-radius: 2px;
+}
+.Filters-right {
+  position: relative;
+}
+.custom-arrow-custom-arrow-left {
+  position: absolute;
+  top: -1px;
+  left: -40px;
+  width: 38px;
+  height: 38px;
+}
+.custom-arrow-custom-arrow-left span {
+  width: 38px;
+  height: 38px;
+  background-color: grey;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.custom-arrow-custom-arrow-right {
+  position: absolute;
+  top: -1px;
+  right: -40px;
+  width: 38px;
+  height: 38px;
+}
+.custom-arrow-custom-arrow-right span {
+  width: 38px;
+  height: 38px;
+  background-color: grey;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.Filters-right-main {
+  width: 98%;
+}
+.Filters-right span {
+  padding: 10px 8px 10px 8px;
+  margin-bottom: 14px;
+  display: flex;
+  background: #5a5a5a;
+  border-radius: 2px;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-drop-Filters {
+  gap: 18px;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 1080px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.sub-drop-Filters {
+  width: 35%;
+  background: #1e242a;
+  border-radius: 4px;
+  padding: 12px;
+  gap: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sub-drop-Filters p {
+  width: 100%;
+  text-align: left;
+}
+@media screen and (min-width: 320px) and (max-width: 426px) {
+  .Filters {
+    margin-top: 0px;
+    padding-left: 13px;
+    padding-right: 13px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .Filters-left {
+    width: 100%;
+    padding: 10px 8px 10px 8px;
+    margin-bottom: 5px;
+  }
+  .Filters-right {
+    width: 100%;
+  }
+  .Filters-right-main {
+    transform: translate(45px, 0);
+    width: 90%;
+  }
+  .custom-arrow-custom-arrow-left {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: -50px;
+  }
+  .custom-arrow-custom-arrow-right {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .Filters-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .Filters-right-main .slick-slide {
+    margin-right: 0px;
+  }
+  .sub-drop-Filters {
+    width: 80%;
+    background: #1e242a;
+    border-radius: 4px;
+    padding: 12px;
+    gap: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,98 @@
+.Topnews {
+  width: 100%;
+  padding-top: 30px;
+  background: url("../../Assets/back.png");
+  background-position: center;
+}
+.Topnews-head {
+  font-size: 42px;
+  padding: 0px 30px 30px 0px;
+}
+.Topnews-slide-text {
+  font-size: 40px;
+}
+.Topnews-mySwiper {
+  width: 100%;
+  height: 510px;
+}
+.Topnews-slide{
+  text-align: left;
+  font-size: 40px;
+  color: #fff;
+  padding-left: 96px;
+  padding-bottom: 96px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background: url("../../Assets/TopNewPhoto.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Topnews-down {
+  
+  display: flex;
+  flex-wrap: wrap;
+}
+.Topnews-down h2 {
+  font-size: 36px;
+  width: 100%;
+}
+.swiper-button-prev, .swiper-button-next {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: calc(var(--swiper-navigation-size) / 44* 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: #fff;
+}
+.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+  display: inline-block;
+  border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.9);
+}
+@media screen and (min-width: 320px) and (max-width: 426px) {
+  .swiper {
+    width: 100%;
+    height: 313px;
+  }
+  .Topnews-head {
+    font-size: 42px;
+    margin-left: 5px;
+  }
+  .Topnews-slide-text {
+    font-size: 23px;
+  }
+  .Topnews-slide {
+    text-align: center;
+    font-size: 20px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    background: url("../../Assets/TopNewPhoto.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .Topnews-down {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .Topnews-down h2 {
+    font-size: 20px;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}

@@ -1,0 +1,106 @@
+.Euro {
+  margin-top: 36px;
+  width: 100%;
+  background: url("../../Assets/back.png");
+  background-position: bottom;
+  
+}
+.Euro-headpost {
+  width: 100%;
+  height: 750px;
+  background: #454544;
+}
+.Euro-mid {
+  margin-bottom: 60px;
+}
+.Euro-mid h2{
+  width: 75%;
+  font-size: 42px;
+}
+.Euro-head {
+  background: #000;
+  padding: 0px 30px 30px 0px;
+  font-size: 36px;
+  margin-bottom: 0px;
+}
+.Euro-down {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-top: solid 1px #9f9f9f;
+  padding-top: 32px;
+}
+.Euro-inside1,
+.Euro-inside2,
+.Euro-inside3 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 100px;
+  margin-right: 23px;
+}
+.Euro-post1,
+.Euro-post2,
+.Euro-post3 {
+  width: 100%;
+  height: 230px;
+  background: #454544;
+}
+.Euro-inside-posts p{
+  width: 70%;
+}
+@media screen and (min-width: 320px) and (max-width: 426px) {
+  .Euro{
+    /* padding-left: 13px;
+    padding-right: 13px; */
+  }
+  .Euro-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Euro-mid h2{
+    font-size: 20px;
+  }
+  .Euro-down {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .Euro-headpost {
+    width: 100%;
+    height: 195px;
+    background: #454544;
+  }
+  .Euro-inside1,
+  .Euro-inside2,
+  .Euro-inside3 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+    padding-bottom: 5px;
+    gap: 12px;
+  }
+  .Euro-post1,
+  .Euro-post2,
+  .Euro-post3 {
+    width: 100%;
+    height: 110px;
+    background: #454544;
+  }
+  .Euro-inside-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}

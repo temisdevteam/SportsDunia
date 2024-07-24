@@ -1,0 +1,47 @@
+.Navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0 22px 0;
+}
+.Navbar ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.Navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-90px ,0);
+    gap:73px;
+}
+.Navbar-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.Navbar-login svg{
+    font-size: 24px;
+}
+.login-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.login-button a{
+    color: #fff;
+    text-decoration: none;
+}
+.login-button svg{
+    font-size: 24px;
+}
+@media screen and (min-width: 320px) and (max-width: 426px) {
+    .Navbar{
+        display: none;
+    }
+  }  
+  

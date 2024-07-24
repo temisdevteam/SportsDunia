@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  background: #000;
+}
+body {
+  margin: 0;
+  padding-left: 156px;
+  padding-right: 156px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-right: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  width: 89px;
+  height: 35px;
+  background: #458ac6;
+  border-radius: 4px;
+  margin-top: 23px;
+}
+.headpost {
+  width: 100%;
+  height: 750px;
+  background: #454544;
+}
+.post {
+  width: 100%;
+  height: 230px;
+  background: #454544;
+}
+
+@media screen and (min-width: 320px) and (max-width: 426px) {
+  body {
+    margin: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat;
+  }
+  h2{
+    font-size: 20px;
+  }
+}
