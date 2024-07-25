@@ -3,14 +3,20 @@
   padding-top: 36px;
   background: url("../../Assets/back.png");
   background-position: top;
-  padding-left: 16px;
-  padding-right: 16px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  overflow: hidden;
 }
 .dropdown-Filters {
-  display: none;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translate(0, -300px);
+}
+.Filters-matches-icon.clicked path {
+  fill: #458AC6;
+  stroke: white;
+  stroke-width: 0.5px;
 }
 .Filters-top-side {
   width: 100%;
@@ -25,8 +31,14 @@
   background: #fff;
 }
 .dropdown-Filters.show {
-  transition: 0.5s;
-  display: block;
+  transition: 0.8s;
+  opacity: 1;
+  transform: translate(0, 0px);
+}
+.main-drop-Filters.show {
+  transition: 0.8s;
+  opacity: 1;
+  transform: translate(0, 100px);
 }
 .Filters-main {
   display: flex;
@@ -45,9 +57,20 @@
   align-items: center;
   gap: 10px;
 }
+.main-drop-Filters {
+  transition: transform 0.3s ease;
+}
+
+.main-drop-Filters.up {
+  transform: translateY(-50px);
+}
+
+.main-drop-Filters.down {
+  transform: translateY(-5px);
+}
 .Filters-right {
   width: 65%;
-  padding: 10px 8px 10px 8px;
+  padding: 0px 8px 10px 8px;
   margin-bottom: 14px;
 }
 .Filters-right-main .slick-slide {
@@ -169,12 +192,20 @@
 }
 @media screen and (min-width: 320px) and (max-width: 426px) {
   .Filters {
+    padding-top: 0px;
     margin-top: 0px;
-    padding-left: 13px;
-    padding-right: 13px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+  }
+  .Filters-main-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .Filters-top-side {
+    width: 100%;
+    padding: 10px;
+    background: #232222;
   }
   .Filters-left {
     width: 100%;
@@ -219,5 +250,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  .main-drop-Filters.up {
+    transform: translateY(-80px);
+  }
+
+  .main-drop-Filters.down {
+    transform: translateY(-50px);
   }
 }

@@ -20,6 +20,7 @@
   font-size: 42px;
 }
 .Laliga-head {
+  font-size: 42px;
   background: #000;
   padding: 0px 30px 30px 0px;
   margin-bottom: 0px;
@@ -62,6 +63,9 @@
     align-items: center;
     padding-left: 13px;
     padding-right: 13px;
+  }
+  .Laliga-head {
+    font-size: 20px !important;
   }
   .Laliga-headpost {
     width: 100%;

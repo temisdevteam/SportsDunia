@@ -6,29 +6,35 @@ import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
-const CustomPrevArrow = (props) => {
+const CustomPrevArrow = props => {
   const { onClick } = props;
   return (
     <div className="custom-arrow-custom-arrow-left" onClick={onClick}>
-      <span><IoIosArrowBack /></span>
+      <span>
+        <IoIosArrowBack />
+      </span>
     </div>
   );
 };
 
-const CustomNextArrow = (props) => {
+const CustomNextArrow = props => {
   const { onClick } = props;
   return (
     <div className="custom-arrow-custom-arrow-right" onClick={onClick}>
-      <span><IoIosArrowForward /></span>
+      <span>
+        <IoIosArrowForward />
+      </span>
     </div>
   );
 };
 
 const Filters = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSvgClicked, setIsSvgClicked] = useState(false);
 
   const toggleFilters = () => {
     setIsOpen(!isOpen);
+    setIsSvgClicked(!isSvgClicked);
   };
 
   const carouselSettings = {
@@ -52,8 +58,7 @@ const Filters = () => {
             width="32"
             height="32"
             viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+            className={`Filters-matches-icon ${isSvgClicked ? 'clicked' : ''}`}
           >
             <g clip-path="url(#clip0_368_76)">
               <path
@@ -101,6 +106,7 @@ const Filters = () => {
           </svg>
         </div>
       </div>
+      <div className="Filters-main-content">
       <div className={`dropdown-Filters ${isOpen ? "show" : ""}`}>
         <div className="Filters-main">
           <div className="Filters-left">
@@ -108,9 +114,9 @@ const Filters = () => {
             <p>Menu</p>
           </div>
           <div className="Filters-right">
-            <div >
+            <div>
               <Slider className="Filters-right-main" {...carouselSettings}>
-                <div  id="one">All</div>
+                <div id="one">All</div>
                 <div id="two">Today</div>
                 <div id="tree">Today</div>
                 <div id="four">Today</div>
@@ -120,7 +126,7 @@ const Filters = () => {
           </div>
         </div>
       </div>
-      <div className="main-drop-Filters">
+      <div className={`main-drop-Filters ${isOpen ? "down" : "up"}`}>
         <div className="sub-drop-Filters">
           <p>European Championship &emsp; 19:30</p>
           <p>European Championship</p>
@@ -152,6 +158,8 @@ const Filters = () => {
           <p>SVK</p>
         </div>
       </div>
+      </div>
+      
     </div>
   );
 };

@@ -63,7 +63,7 @@
     justify-content: center;
     align-items: center;
   }
-  .Euro-mid h2{
+  .Euro-head{
     font-size: 20px;
   }
   .Euro-down {
@@ -102,5 +102,11 @@
     display: flex;
     flex-direction: column;
     gap: 0;
+  }
+  .Euro-inside-posts p{
+  width: 100%;
+}
+  .Euro h2{
+    font-size: 20px;
   }
 }

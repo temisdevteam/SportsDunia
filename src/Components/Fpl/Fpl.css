@@ -60,6 +60,9 @@
     justify-content: center;
     align-items: center;
   }
+  .Fpl-head {
+    font-size: 20px;
+  }
   .Fpl-inside1,
   .Fpl-inside2,
   .Fpl-inside3,

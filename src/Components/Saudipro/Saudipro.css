@@ -120,6 +120,10 @@
     flex-direction: column;
     gap: 24px;
   }
+  .Saudipro-head {
+    font-size: 20px;
+
+  }
   .Saudipro-inside-left {
     width: 100%;
     display: flex;
@@ -145,7 +149,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
-    gap: 24px;
+    gap: 12px;
   }
   .Saudipro-inside-right-two {
     width: 100%;
@@ -153,7 +157,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
-    gap: 24px;
+    gap: 12px;
   }
   .Saudipro-inside-right-one img {
     height: 110px;

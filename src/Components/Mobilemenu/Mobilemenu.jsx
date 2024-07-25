@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { CgMenuRightAlt } from "react-icons/cg";
+import { MdOutlineMenu } from "react-icons/md";
 import "./Mobilemenu.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isIconClicked, setIsIconClicked] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    setIsIconClicked(!isIconClicked);
   };
 
   return (
@@ -71,13 +72,25 @@ const Navbar = () => {
       </svg>
 
       <div className="menu-icon" onClick={toggleMenu}>
-        <CgMenuRightAlt />
+        <MdOutlineMenu
+          className={`icon-menu-mobile ${isIconClicked ? "clicked" : ""}`}
+        />
       </div>
       <div className={`dropdown-menu ${isOpen ? "show" : ""}`}>
-        <a href="#">Transfers</a>
-        <a href="#">News</a>
-        <a href="#">Fixtures</a>
-        <a href="#">Competitions</a>
+        <ul>
+          <li>
+            <a href="#">Transfers</a>
+          </li>
+          <li>
+            <a href="#">News</a>
+          </li>
+          <li>
+            <a href="#">Fixtures</a>
+          </li>
+          <li>
+            <a href="#">Competitions</a>
+          </li>
+        </ul>
       </div>
     </nav>
   );
