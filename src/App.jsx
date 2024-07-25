@@ -15,7 +15,7 @@ import Filters from './Components/Filters/Filters';
 
 const App = () => {
   return (
-    <div>
+    <div className='main'>
       <Mobilemenu/>
       <Navbar/>
       <Hero/>

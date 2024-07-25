@@ -1,6 +1,6 @@
-.menu-icon-navbar{
+.menu-icon-navbar {
+  overflow-x: hidden;
   background-color: #333;
-  overflow: hidden;
   color: white;
   padding: 10px;
   text-align: left;
@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.menu-icon-navbar-logo{
+.menu-icon-navbar-logo {
   width: 180px;
 }
 .menu-icon {
@@ -19,7 +19,7 @@
 .dropdown-menu {
   opacity: 0;
   transition: 0.5s;
-  transform: translate(500px,0px);
+  /* transform: translate(500px, 0px); */
   background-color: #333;
   position: absolute;
   top: 50px;
@@ -31,7 +31,7 @@
 
 .dropdown-menu.show {
   transition: 0.5s;
-  transform: translate(0,0);
+  /* transform: translate(0, 0); */
   opacity: 1;
 }
 
@@ -47,7 +47,7 @@
   background-color: #575757;
 }
 @media screen and (min-width: 431px) and (max-width: 2560px) {
-    .menu-icon-navbar{
-        display: none;
-    }
+  .menu-icon-navbar {
+    display: none;
+  }
 }
