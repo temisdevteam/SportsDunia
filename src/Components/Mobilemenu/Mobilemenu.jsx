@@ -1,15 +1,33 @@
 import React, { useState } from "react";
-import { MdOutlineMenu } from "react-icons/md";
 import "./Mobilemenu.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isIconClicked, setIsIconClicked] = useState(false);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const [isInsideIconClicked, setIsInsideIconClicked] = useState(false);// State for first inside sub-menu icon
+  const [isInsideIconClickedTwo, setIsInsideIconClickedTwo] = useState(false); // example
+  const [isMainIconClicked, setIsMainIconClicked] = useState(false); // State for main sub-menu icon
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     setIsIconClicked(!isIconClicked);
   };
 
+  const toggleSubMenu = () => {
+    setIsSubMenuOpen(!isSubMenuOpen); // Toggle submenu state
+    setIsMainIconClicked(!isMainIconClicked); // Toggle main icon state
+  };
+// if you need more sub menu copy and paste const toggleInsideIcon and add number at the end just like example
+
+  const toggleInsideIcon = () => {
+    setIsInsideIconClicked(!isInsideIconClicked);
+  };
+  // example
+  const toggleInsideIconTwo = () => {
+    setIsInsideIconClickedTwo(!isInsideIconClickedTwo); 
+  };
+  
   return (
     <nav className="menu-icon-navbar">
       <svg
@@ -72,9 +90,11 @@ const Navbar = () => {
       </svg>
 
       <div className="menu-icon" onClick={toggleMenu}>
-        <MdOutlineMenu
-          className={`icon-menu-mobile ${isIconClicked ? "clicked" : ""}`}
-        />
+        <div className="icon-menu-mobile">
+          <span className={`bar-one ${isIconClicked ? "clicked" : ""}`} />
+          <span className={`bar-two ${isIconClicked ? "clicked" : ""}`} />
+          <span className={`bar-tree ${isIconClicked ? "clicked" : ""}`} />
+        </div>
       </div>
       <div className={`dropdown-menu ${isOpen ? "show" : ""}`}>
         <ul>
@@ -88,7 +108,31 @@ const Navbar = () => {
             <a href="#">Fixtures</a>
           </li>
           <li>
-            <a href="#">Competitions</a>
+            <a className="link-sub-menu" href="#" onClick={toggleSubMenu}>
+              Competitions
+              <div className="inside-sub-menu-icon-main">
+                <span className={`Mobilemenu-icon-main-one ${isMainIconClicked ? "hide" : ""}`}></span>
+                <span className={`Mobilemenu-icon-main-two ${isMainIconClicked ? "hide" : ""}`}></span>
+              </div>
+            </a>
+            <ul className="sub-menu">
+              {/* copy and paste li for more sub menu */}
+              <li className={`inside-sub-menu ${isSubMenuOpen ? "show" : ""}`}>
+                lorem
+                <div className="inside-sub-menu-icon" onClick={toggleInsideIcon}>
+                  <span className={`inside-sub-menu-icon-one ${isInsideIconClicked ? "hide" : ""}`}></span>
+                  <span className={`inside-sub-menu-icon-two ${isInsideIconClicked ? "hide" : ""}`}></span>
+                </div>
+              </li>
+              {/* example */}
+              <li className={`inside-sub-menu ${isSubMenuOpen ? "show" : ""}`}>
+                lorem
+                <div className="inside-sub-menu-icon" onClick={toggleInsideIconTwo}>
+                  <span className={`inside-sub-menu-icon-three ${isInsideIconClickedTwo ? "hide" : ""}`}></span>
+                  <span className={`inside-sub-menu-icon-four ${isInsideIconClickedTwo ? "hide" : ""}`}></span>
+                </div>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>

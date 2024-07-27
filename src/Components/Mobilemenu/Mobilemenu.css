@@ -16,12 +16,34 @@
   font-size: 24px;
 }
 .icon-menu-mobile {
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   transition: color 0.3s;
 }
-
-.icon-menu-mobile.clicked {
-  color: #458AC6;
+.bar-one,
+.bar-two,
+.bar-tree {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+}
+.bar-one.clicked {
+  opacity: 0;
+}
+.bar-two.clicked {
+  transition: 0.5s;
+  transform: translate(0, 0px) rotate(45deg);
+}
+.bar-tree.clicked {
+  transition: 0.5s;
+  transform: translate(0px, -7px)rotate(-45deg);
+}
+.bar-one.clicked,
+.bar-two.clicked,
+.bar-tree.clicked {
+  background: #458ac6;
 }
 .dropdown-menu {
   opacity: 0;
@@ -47,15 +69,133 @@
   padding: 12px 16px;
   text-decoration: none;
   font-weight: 900;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
   text-align: left;
 }
-.dropdown-menu ul{
+.dropdown-menu ul {
   padding-top: 20px;
 }
-.dropdown-menu ul li{
+.dropdown-menu ul li {
   padding: 10px;
 }
+.sub-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  list-style: none;
+}
+.inside-sub-menu {
+  transition: 0.3s;
+  transform: translate(0, -200px);
+  opacity: 1;
+}
+
+.inside-sub-menu.show {
+  transition: 0.3s;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.sub-menu li {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  padding: 8px;
+  border-bottom: 1px solid #777;
+}
+.inside-sub-menu-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Mobilemenu-icon-main-one {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+  transform: translate(0px, 0px) rotate(45deg);
+}
+.Mobilemenu-icon-main-two {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+  transform: translate(0px, -2px) rotate(-45deg);
+}
+.Mobilemenu-icon-main-one.hide {
+  opacity: 0;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+  transform: translate(0px, 0px) rotate(45deg);
+}
+.Mobilemenu-icon-main-two.hide {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+  transform: translate(0px, 0px) rotate(0deg);
+}
+.inside-sub-menu-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* If you need more sub-menu, just copy and paste it and change 
+the number at the end of the class name, this process should be one in between*/
+.inside-sub-menu-icon-one,
+.inside-sub-menu-icon-three {
+  display: block;
+  opacity: 1;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+  transform: translate(0px, 10px) rotate(90deg);
+}
+.inside-sub-menu-icon-two,
+.inside-sub-menu-icon-four {
+  display: block;
+  opacity: 1;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+  transform: translate(0px, 0px) rotate(0deg);
+}
+.inside-sub-menu-icon-one.hide,
+.inside-sub-menu-icon-three.hide {
+  opacity: 1;
+  transition: 0.3s;
+  transform: translate(0px, 10px) rotate(45deg);
+}
+.inside-sub-menu-icon-two.hide,
+.inside-sub-menu-icon-four.hide {
+  opacity: 1;
+  transition: 0.3s;
+  transform: translate(0px, 0px) rotate(-35deg);
+}
+/* end of sub menu style */
+
+/* Optional: Styles for the submenu items */
+.sub-menu li:hover {
+  color: #000;
+  background-color: #999;
+}
+/* end of Optional: Styles for the submenu items */
 @media screen and (min-width: 431px) and (max-width: 2560px) {
   .menu-icon-navbar {
     display: none;
